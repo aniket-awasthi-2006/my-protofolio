@@ -1,4 +1,4 @@
-import projImg1 from '../assets/img/project-img1.png';
+﻿import projImg1 from '../assets/img/project-img1.png';
 import projImg2 from '../assets/img/project-img2.png';
 import projImg3 from '../assets/img/project-img3.png';
 import cert1 from '../assets/media/cert1.jpg';
@@ -20,6 +20,7 @@ import post8 from '../assets/media/post8.jpg';
 import post12 from '../assets/media/post12.jpg';
 import post16 from '../assets/media/post16.jpg';
 import app1 from '../assets/media/app1.mp4';
+import myresume from '../assets/media/Aniket Awasthi Resume.pdf';
 
 
 import {
@@ -52,7 +53,7 @@ export const navigationLinks = [
 
 export const resume = {
   label: 'Download Resume',
-  href: '/resume.pdf',
+  href: myresume,
 };
 
 export const profile = {
