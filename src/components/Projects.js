@@ -4,6 +4,7 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import projapp1 from "../assets/media/proj-app-1.jpg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -14,34 +15,46 @@ export const Projects = () => {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg1,
+      projectUrl: ""
+      
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg2,
+      projectUrl: ""
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg3,
+      projectUrl: ""
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg1,
+      projectUrl: ""
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg2,
+      projectUrl: ""
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg3,
+      projectUrl: ""
     },
   ];
-  const projects2 = [];
+  const projects2 = [{
+      title: "NeXora - AI FlashCards",
+      description: "Design & Development",
+      imgUrl: projapp1,
+      projectUrl: "https://github.com/aniket-awasthi-2006/NeXora_Ai_FlashCards"
+    }];
   const projects3 = [];
   return (
     <section className="project" id="projects">

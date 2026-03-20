@@ -154,6 +154,27 @@ export const projects = [
       github: 'https://github.com/yourhandle/pulse-commerce',
     },
   },
+{
+    id: 'nexora',
+    title: 'NeXora - AI FlashCards',
+    category: 'APP',
+    summary: 'Unlike traditional flashcard apps, NeXora offers AI-driven testing, analytics, voice-based learning, and personalized feedback to boost memory and retention.',
+    description:
+      'Built using Flutter, powered by ChatGPT API, secured with Firebase, and enhanced with Google Speech APIs, NeXora provides a seamless multi-platform learning experience.',
+    image: projImg1,
+    stack: ["Flutter",
+"Dart",
+"Firebase Auth",
+"Firebase Firestore",
+"Firebase Storage",
+"ChatGPT 3.5 Turbo API",
+"Speech-to-Text & TTS",
+"Flutter Multi-Platform"],
+    metrics: ['20% faster Generation', '+18% faster Concept review', '100% AI-generated content accuracy', 'Secure user data with Firebase and locally stored flashcard data'],
+    links: {
+      github: 'https://github.com/aniket-awasthi-2006/NeXora_Ai_FlashCards',
+    },
+  },
   {
     id: 'spectra-studio',
     title: 'Spectra Studio',
