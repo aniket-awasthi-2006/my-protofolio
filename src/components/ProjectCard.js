@@ -1,10 +1,9 @@
-import { hover } from "@testing-library/user-event/dist/hover";
 import { Col } from "react-bootstrap";
 
 export const ProjectCard = ({ title, description, imgUrl, projectUrl }) => {
   return (
     
-    <Col size={12} sm={6} md={4} hover={true} >
+    <Col size={12} sm={6} md={4}>
       <a href={projectUrl} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit', display: 'block' , height: '100%'}}>
       <div className="proj-imgbx">
         <img src={imgUrl} alt={`${title} preview`} className="proj-image"/>

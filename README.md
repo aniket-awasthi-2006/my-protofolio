@@ -53,6 +53,7 @@ Create a `.env` file in the project root:
 
 ```bash
 PORT=5000
+CLIENT_PORT=3000
 MONGODB_URI=your-mongodb-connection-string
 MONGODB_URI_FALLBACK=your-non-srv-mongodb-connection-string
 MONGODB_DB_NAME=portfolio
@@ -68,4 +69,8 @@ Mongo connection order:
 2. `MONGODB_URI` as secondary attempt
 
 If you want SRV first, set `MONGODB_PREFER_FALLBACK=false`.
+
+Notes:
+- `PORT` is used by the Express backend (`npm run server`).
+- `npm start` always serves the React app on `CLIENT_PORT` (default `3000`), so it does not conflict with backend `PORT`.
 "# my-protofolio" 
