@@ -1,6 +1,25 @@
 import { getApiUrl } from "./api";
 
-export const trackResumeDownload = (source) => {
+export const trackResumeDownload = async (source) => {
+  const response = await fetch(getApiUrl("/api/resume-downloads"), {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json;charset=utf-8",
+    },
+    body: JSON.stringify({
+      source,
+      path: window.location.pathname,
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error("Unable to record resume download");
+  }
+
+  return response.json();
+};
+
+export const trackResumeDownloadBeacon = (source) => {
   const payload = JSON.stringify({
     source,
     path: window.location.pathname,

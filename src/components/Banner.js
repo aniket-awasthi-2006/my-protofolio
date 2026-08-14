@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/my_pic.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import { resume } from '../content/portfolioData';
-import { trackResumeDownload } from '../config/tracking';
+import { ResumeDownloadButton } from './ResumeDownloadButton';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -70,14 +70,12 @@ export const Banner = () => {
                     <a className="banner-btn banner-btn--primary" href="#connect">
                       Let's Connect <ArrowRightCircle size={22} />
                     </a>
-                    <a
+                    <ResumeDownloadButton
                       className="banner-btn banner-btn--outline"
-                      href={resume.href}
-                      download
-                      onClick={() => trackResumeDownload("banner")}
+                      source="banner"
                     >
                       {resume.label}
-                    </a>
+                    </ResumeDownloadButton>
                   </div>
                 </div>}
             </TrackVisibility>

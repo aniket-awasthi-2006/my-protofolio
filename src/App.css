@@ -746,11 +746,19 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 
 /************ Skills Detailed ************/
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* This perfectly centers the bottom 2 items */
   gap: 20px;
   text-align: left;
 }
+
+.skills-grid > * {
+  /* 3 items per row, minus the gap space */
+  width: calc(33.333% - 14px); 
+}
+
+
 .skill-group {
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.04);
@@ -917,9 +925,37 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 .experience-attachments-viewer img {
   width: 100%;
   max-height: 420px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.14);
+}
+.experience-attachments-embed {
+  width: 100%;
+  min-height: 399px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #fff;
+}
+.experience-attachments-embed iframe {
+  display: block;
+  width: 100%;
+  min-height: 399px;
+  border: 0;
+}
+.experience-attachments-pdf {
+  width: 100%;
+  min-height: 520px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #f5f5f5;
+}
+.experience-attachments-pdf iframe {
+  display: block;
+  width: 100%;
+  min-height: 520px;
+  border: 0;
 }
 .experience-attachments-viewer figcaption {
   font-size: 13px;
@@ -962,6 +998,21 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   width: 100%;
   height: 70px;
   object-fit: cover;
+}
+.experience-attachments-thumb-label {
+  min-height: 70px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(135deg, #0a66c2, #1f1f2b);
+}
+.experience-attachments-thumb-label--pdf {
+  background: linear-gradient(135deg, #d63838, #30212a);
 }
 
 /************ Certificates Section ************/
@@ -1234,12 +1285,12 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   width: min(360px, calc(100vw - 28px));
   display: flex;
   align-items: flex-start;
-  gap: 11px;
+  gap: 12px;
   padding: 12px 14px;
   border-radius: 14px;
-  border: 1px solid rgba(120, 255, 190, 0.28);
+  border: 2px solid rgba(120, 255, 190, 0.28);
   background: linear-gradient(135deg, rgba(6, 30, 20, 0.96), rgba(10, 16, 34, 0.97));
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 18px 42px rgba(251, 251, 251, 0.14);
   z-index: 12000;
   opacity: 0;
   transform: translate3d(0, 18px, 0);
@@ -1258,7 +1309,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.6px;
   color: #072111;

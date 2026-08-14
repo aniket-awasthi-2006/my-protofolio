@@ -24,8 +24,8 @@ export const SuccessPopup = ({ message, visible, onClose, duration = 3200, botto
       role="status"
       aria-live="polite"
     >
-      <span className="success-popup__badge" aria-hidden="true">OK</span>
-      <p>{message}</p>
+      <span className="success-popup__badge" aria-hidden="true">✔️</span>
+      <p style={{ fontSize: '20px' }}>{message}</p>
     </div>
   );
 };

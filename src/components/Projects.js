@@ -1,10 +1,11 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import projapp1 from "../assets/media/proj-app-1.jpg";
+import app2 from "../assets/media/app2.jpg";
+import web1 from "../assets/media/web1.jpg";
+import web2 from "../assets/media/web2.jpg";
+import game1 from "../assets/media/game1.jpg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -12,41 +13,16 @@ export const Projects = () => {
 
   const projects1 = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-      projectUrl: ""
-      
+      title: "MediQueue",
+      description: "Hospital OPD queue system built with Next.js, TypeScript, MongoDB, Firebase, and Socket.IO.",
+      imgUrl: web2,
+      projectUrl: "https://github.com/aniket-awasthi-2006/Tech-Titans_HC01_SAGE"
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-      projectUrl: ""
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-      projectUrl: ""
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-      projectUrl: ""
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-      projectUrl: ""
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-      projectUrl: ""
+      title: "Vitalizer",
+      description: "Healthcare habit tracker with wellness scoring, weekly insights, themes, and responsive UI.",
+      imgUrl: web1,
+      projectUrl: "https://github.com/aniket-awasthi-2006/Vitalizer"
     },
   ];
   const projects2 = [{
@@ -54,8 +30,22 @@ export const Projects = () => {
       description: "Design & Development",
       imgUrl: projapp1,
       projectUrl: "https://github.com/aniket-awasthi-2006/NeXora_Ai_FlashCards"
-    }];
-  const projects3 = [];
+    },
+    {
+      title: "Vr. Mouse",
+      description: "Flutter virtual mouse controller with Bluetooth HID, air pointer, keyboard, trackpad, and sensor calibration.",
+      imgUrl: app2,
+      projectUrl: "https://github.com/aniket-awasthi-2006/Vr.Mouse"
+    }
+  ];
+  const projects3 = [
+    {
+      title: "Aki Cricket",
+      description: "Akinator-style AI cricket mind-reader built for GDG Agentic Premier League with Gemini, Firebase, and Next.js.",
+      imgUrl: game1,
+      projectUrl: "https://github.com/aniket-awasthi-2006/Aki-Cricket"
+    }
+  ];
   return (
     <section className="project" id="projects">
       <Container>

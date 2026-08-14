@@ -6,7 +6,7 @@ import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import { HashLink } from 'react-router-hash-link';
 import { resume } from '../content/portfolioData';
-import { trackResumeDownload } from '../config/tracking';
+import { ResumeDownloadButton } from './ResumeDownloadButton';
 import {
   BrowserRouter as Router
 } from "react-router-dom";
@@ -59,9 +59,9 @@ export const NavBar = () => {
                 <a href="https://github.com/aniket-awasthi-2006" target="_blank" rel="noreferrer"><img src={navIcon2} style={{height:23,width:23}} alt="GitHub" /></a>
                 <a href="https://www.instagram.com/aniket_awasthi_code" target="_blank" rel="noreferrer"><img src={navIcon3} style={{height:20,width:20}} alt="Instagram" /></a>
               </div>
-              <a className="resume-link" href={resume.href} download onClick={() => trackResumeDownload("navbar")}>
+              <ResumeDownloadButton className="resume-link" source="navbar">
                 <button className="vvd vvd-outline"><span>{resume.label}</span></button>
-              </a>
+              </ResumeDownloadButton>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let's Connect</span></button>
               </HashLink>

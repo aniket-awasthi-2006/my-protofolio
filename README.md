@@ -14,7 +14,7 @@ In the /personal-portfolio, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the React app and Express backend in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
@@ -37,7 +37,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run server`
 
-Starts the Express backend on `http://localhost:5000`.
+Starts only the Express backend on `http://localhost:5000`.
 
 The backend connects to MongoDB Atlas and stores:
 

@@ -12,6 +12,8 @@ import cert8 from '../assets/media/cert8.jpg';
 import cert9 from '../assets/media/cert9.jpg';
 import cert10 from '../assets/media/cert10.jpg';
 import cert11 from '../assets/media/cert11.jpg';
+import cert12 from '../assets/media/cert12.jpg';
+import cert13 from '../assets/media/cert13.jpg';
 import post3 from '../assets/media/post3.jpg';
 import post4 from '../assets/media/post4.jpg';
 import post6 from '../assets/media/post6.png';
@@ -20,7 +22,14 @@ import post8 from '../assets/media/post8.jpg';
 import post12 from '../assets/media/post12.jpg';
 import post16 from '../assets/media/post16.jpg';
 import app1 from '../assets/media/app1.mp4';
-import myresume from '../assets/media/Aniket Awasthi Resume.pdf';
+import myresume from '../assets/media/Aniket Resume App Dev.pdf';
+import internrepo2 from '../assets/media/internrepo2.pdf';
+import interncert1 from '../assets/media/interncert1.jpg';
+import internlor1 from '../assets/media/internlor1.jpg';
+import interncert2 from '../assets/media/interncert2.jpg';
+import marksheet1 from '../assets/media/marksheet1.jpeg';
+import pro1 from '../assets/media/pro1.png';
+import pro2 from '../assets/media/pro2.png';
 
 
 import {
@@ -126,6 +135,17 @@ export const skillGroups = [
     ],
   },
   {
+    title: 'App Development',
+    description: 'Cross-platform mobile app development with Flutter, native integrations, and smooth product experiences.',
+    icon: TelephoneFill,
+    skills: [
+      { name: 'Flutter', level: 91, detail: 'Build polished mobile apps with reusable widgets, responsive layouts, and smooth state-driven UI.' },
+      { name: 'Dart', level: 88, detail: 'Write clean app logic, async flows, models, and maintainable feature modules.' },
+      { name: 'Native Android Integration', level: 82, detail: 'Connect Flutter apps with Kotlin, MethodChannels, Bluetooth, sensors, and device APIs.' },
+      { name: 'Firebase for Apps', level: 86, detail: 'Use Auth, Firestore, Storage, and realtime data flows for production-ready mobile features.' },
+    ],
+  },
+  {
     title: 'Product Delivery',
     description: 'The execution layer that turns ideas into maintainable releases without losing design intent.',
     icon: Kanban,
@@ -136,13 +156,24 @@ export const skillGroups = [
       { name: 'QA and Iteration', level: 85, detail: 'Validate behavior thoroughly and ship fast feedback-driven updates.' },
     ],
   },
+  {
+    title: 'Soft Skills',
+    description: 'The collaboration habits I use to keep projects clear, calm, and moving toward useful outcomes.',
+    icon: Stars,
+    skills: [
+      { name: 'Communication', level: 90, detail: 'Explain ideas clearly, ask useful questions, and keep teammates aligned on progress.' },
+      { name: 'Problem Solving', level: 92, detail: 'Break complex requirements into practical steps and debug issues with patience.' },
+      { name: 'Adaptability', level: 88, detail: 'Learn new tools quickly and adjust smoothly when project needs or timelines change.' },
+      { name: 'Ownership', level: 91, detail: 'Take responsibility for delivery quality, follow-through, and improving the user experience.' },
+    ],
+  },
 ];
 
 export const projects = [
   {
-    id: 'pulse-commerce',
-    title: 'Pulse Commerce',
-    category: 'Product',
+    id: 'Vitalizer',
+    title: 'Vitalizer',
+    category: 'Web App',
     summary: 'A premium commerce dashboard for campaign tracking, stock visibility, and operational decision-making.',
     description:
       'This concept leans into analytics-heavy product UI with cleaner cards, stronger contrast, modular stats, and a glassmorphism visual system built for long-form dashboard use.',
@@ -157,7 +188,7 @@ export const projects = [
 {
     id: 'nexora',
     title: 'NeXora - AI FlashCards',
-    category: 'APP',
+    category: 'App',
     summary: 'Unlike traditional flashcard apps, NeXora offers AI-driven testing, analytics, voice-based learning, and personalized feedback to boost memory and retention.',
     description:
       'Built using Flutter, powered by ChatGPT API, secured with Firebase, and enhanced with Google Speech APIs, NeXora provides a seamless multi-platform learning experience.',
@@ -225,6 +256,43 @@ export const projects = [
 export const timeline = [
   {
     type: 'Experience',
+    title: 'App Developer Internship',
+    company: 'CodeAlpha',
+    period: '1 Month',
+    location: 'Remote',
+    icon: BriefcaseFill,
+    highlights: [
+      'Worked on mobile app development tasks involving Flutter and Dart.',
+      'Worked for building and improving app features.',
+      'Gained experience in mobile development workflows and debugging.', 
+    ],
+    attachments: [
+      {
+        src: interncert1,
+        alt: 'certificate of internship',
+        caption: 'Certificate of completion for the internship.',
+      },{
+        src: internlor1,
+        alt: 'letter of recommendation',
+        caption: 'Letter of recommendation from the internship supervisor.',
+      },{
+        type: 'iframe',
+        src: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7483386818365927424?compact=1',
+        title: 'LinkedIn embedded post',
+        thumbnailLabel: 'LinkedIn Post',
+        caption: 'LinkedIn post showcasing the internship work of task 1.',
+      },
+      {
+        type: 'iframe',
+        src: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7487840805349396483?compact=1',
+        title: 'LinkedIn embedded post',
+        thumbnailLabel: 'LinkedIn Post',
+        caption: 'LinkedIn post showcasing the internship work of task 2.',
+      },
+    ],
+  },
+  {
+    type: 'Experience',
     title: 'Full Stack Developer Intern',
     company: 'CyberShoora',
     period: '3 Months',
@@ -237,15 +305,17 @@ export const timeline = [
     ],
     attachments: [
       {
-        src: projImg1,
-        alt: 'CyberShoora dashboard feature work screenshot',
-        caption: 'Dashboard view built during internship work.',
+        src: interncert2,
+        alt: 'certificate of internship',
+        caption: 'Certificate of completion for the internship.',
+      },{
+        type: 'pdf',
+        src: internrepo2,
+        title: 'Internship Report PDF preview',
+        thumbnailLabel: 'PDF',
+        caption: 'Project report and documentation for the internship work.',
       },
-      {
-        src: projImg2,
-        alt: 'CyberShoora UI refinement screenshot',
-        caption: 'UI improvements and feature validation state.',
-      },
+      
     ],
   },
   {
@@ -262,9 +332,14 @@ export const timeline = [
     ],
     attachments: [
       {
-        src: projImg3,
+        src: pro1,
         alt: 'Freelance website homepage screenshot',
-        caption: 'Landing page delivered for a client project.',
+        caption: 'Screenshot of a homepage from a freelance project built with Wix Studio.',
+      },
+       {
+        src: pro2,
+        alt: 'Freelance website homepage screenshot',
+        caption: 'Screenshot of a homepage from a freelance project built with Wix Studio.',
       },
     ],
   },
@@ -282,14 +357,9 @@ export const timeline = [
     ],
     attachments: [
       {
-        src: projImg2,
-        alt: 'SAGE University coursework project interface',
-        caption: 'One of the interface prototypes built during coursework.',
-      },
-      {
-        src: projImg1,
-        alt: 'Academic project dashboard screenshot',
-        caption: 'Academic project presentation screenshot.',
+        src: marksheet1,
+        alt: 'Marksheet',
+        caption: 'third semester marksheet of B.Tech CST',
       },
     ],
   },
@@ -305,18 +375,24 @@ export const timeline = [
       'Built early programming fundamentals and logical problem-solving skills.',
       'Developed strong analytical thinking through mathematics and computational concepts.',
     ],
-    attachments: [
-      {
-        src: projImg3,
-        alt: 'Early computer science project visual',
-        caption: 'Early-stage programming and CS practice project snapshot.',
-      },
-    ],
   },
 ];
 
 export const certificates = [
   {
+    title: 'ntroduction to Android Mobile Application Development',
+    issuer: 'Meta',
+    issued: 'April 2026',
+    summary: 'completed a practical course on Android mobile application development, covering UI design, app architecture, and deployment strategies.',
+    image: cert13,
+    credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/P5QCIBL2UT63',
+  },{
+    title: 'Hack-A-Sprint Cognoise x Opportunity Summit 2026',
+    issuer: 'Sri Aurobindo Group of Institutes',
+    issued: 'April 2026',
+    summary: 'Participated in a 24-hour hackathon focused on cybersecurity, problem-solving, and collaborative development, culminating in a final project presentation.',
+    image: cert12,
+  },{
     title: 'Deloitte Cyber Job Simulation',
     issuer: 'Deloitte',
     issued: 'March 2026',

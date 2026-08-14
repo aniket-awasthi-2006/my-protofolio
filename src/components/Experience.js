@@ -2,6 +2,10 @@ import { useState } from 'react';
 import { Container, Row, Col, Modal } from 'react-bootstrap';
 import { timeline } from '../content/portfolioData';
 
+const isIframeAttachment = (attachment) => attachment?.type === 'iframe';
+const isPdfAttachment = (attachment) => attachment?.type === 'pdf';
+const isLabelThumbnailAttachment = (attachment) => isIframeAttachment(attachment) || isPdfAttachment(attachment);
+
 export const Experience = () => {
   const [isAttachmentOpen, setIsAttachmentOpen] = useState(false);
   const [activeAttachments, setActiveAttachments] = useState([]);
@@ -100,10 +104,30 @@ export const Experience = () => {
         <Modal.Body>
           {activeAttachment && (
             <figure className="experience-attachments-viewer">
-              <img
-                alt={activeAttachment.alt || `${activeAttachmentTitle} attachment ${activeAttachmentIndex + 1}`}
-                src={activeAttachment.src}
-              />
+              {isIframeAttachment(activeAttachment) ? (
+                <div className="experience-attachments-embed">
+                  <iframe
+                    allowFullScreen
+                    frameBorder="0"
+                    loading="lazy"
+                    src={activeAttachment.src}
+                    title={activeAttachment.title || `${activeAttachmentTitle} embedded attachment ${activeAttachmentIndex + 1}`}
+                  />
+                </div>
+              ) : isPdfAttachment(activeAttachment) ? (
+                <div className="experience-attachments-pdf">
+                  <iframe
+                    loading="lazy"
+                    src={activeAttachment.src}
+                    title={activeAttachment.title || `${activeAttachmentTitle} PDF attachment ${activeAttachmentIndex + 1}`}
+                  />
+                </div>
+              ) : (
+                <img
+                  alt={activeAttachment.alt || `${activeAttachmentTitle} attachment ${activeAttachmentIndex + 1}`}
+                  src={activeAttachment.src}
+                />
+              )}
               {activeAttachment.caption && <figcaption>{activeAttachment.caption}</figcaption>}
             </figure>
           )}
@@ -129,10 +153,20 @@ export const Experience = () => {
                     onClick={() => setActiveAttachmentIndex(index)}
                     type="button"
                   >
-                    <img
-                      alt={attachment.alt || `Attachment thumbnail ${index + 1}`}
-                      src={attachment.src}
-                    />
+                    {isLabelThumbnailAttachment(attachment) ? (
+                      <span
+                        className={`experience-attachments-thumb-label ${
+                          isPdfAttachment(attachment) ? 'experience-attachments-thumb-label--pdf' : ''
+                        }`}
+                      >
+                        {attachment.thumbnailLabel || (isPdfAttachment(attachment) ? 'PDF' : 'LinkedIn Post')}
+                      </span>
+                    ) : (
+                      <img
+                        alt={attachment.alt || `Attachment thumbnail ${index + 1}`}
+                        src={attachment.src}
+                      />
+                    )}
                   </button>
                 ))}
               </div>

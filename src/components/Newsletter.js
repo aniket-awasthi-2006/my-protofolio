@@ -50,8 +50,8 @@ export const Newsletter = () => {
         <div className="newsletter-bx margin-bx-30">
           <Row>
             <Col lg={12} md={6} xl={5}>
-              <h3>Subscribe for New Posts and Project Updates</h3>
-              <p>Get occasional product, UI, and front-end engineering insights directly in your inbox.</p>
+              <h3>Request Immediate Outreach</h3>
+              <p>Please feel free to reach out to me directly for any urgent matters</p>
               {status === 'sending' && <Alert>Sending...</Alert>}
               {status === 'error' && <Alert variant="danger">{message}</Alert>}
             </Col>
