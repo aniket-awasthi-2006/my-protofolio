@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/my_pic.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-import { resume } from '../content/portfolioData';
-import { ResumeDownloadButton } from './ResumeDownloadButton';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
