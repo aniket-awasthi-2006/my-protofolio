@@ -70,12 +70,7 @@ export const Banner = () => {
                     <a className="banner-btn banner-btn--primary" href="#connect">
                       Let's Connect <ArrowRightCircle size={22} />
                     </a>
-                    <ResumeDownloadButton
-                      className="banner-btn banner-btn--outline"
-                      source="banner"
-                    >
-                      {resume.label}
-                    </ResumeDownloadButton>
+                   
                   </div>
                 </div>}
             </TrackVisibility>

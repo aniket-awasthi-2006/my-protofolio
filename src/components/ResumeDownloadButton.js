@@ -4,13 +4,7 @@ import { trackResumeDownload } from "../config/tracking";
 import { SuccessPopup } from "./SuccessPopup";
 
 const triggerResumeDownload = () => {
-  const link = document.createElement("a");
-  link.href = resume.href;
-  link.download = "";
-  link.style.display = "none";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+   window.open('https://drive.usercontent.google.com/u/0/uc?id=1bhT8oPewb9Ko1sA2wskdKZt59TPlC5a3&export=download');
 };
 
 export const ResumeDownloadButton = ({ source, className, children, bottomOffset = 24 }) => {
